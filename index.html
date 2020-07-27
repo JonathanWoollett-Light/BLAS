@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <meta charset="UTF-8">
+
+        <title>BLAS</title>
+
+        <style>
+            html {
+                font-family: "Consolas";
+            }
+            h1,h2,h3 {
+                text-decoration: underline;
+            }
+            h6 {
+                color:grey;
+            }
+            
+            .tabs .tab a:hover {
+                color:grey;
+                /*Custom Color On Hover*/
+            }
+            .tabs .tab a:focus.active {
+                background-color: rgba(80, 80, 80, 0.1);
+                /*Custom Background Color While Active*/
+            }
+            .tabs .indicator {
+                background-color:black;
+                /*Custom Color Of Indicator*/
+            }
+
+            .table-of-contents a.active {
+                border-left: 2px solid grey;
+            }
+            img {
+                max-width: 300px;
+            }
+            /* TODO Make focus side bar grey and not pink as it is currently */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col hide-on-small-only m3 l2 pinned">
+                    <ul class="section table-of-contents">
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#level1">Level 1</a></li>
+                        <li><a href="#level2">Level 2</a></li>
+                        <li><a href="#level3">Level 3</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m9 offset-m3 l10 offset-l2">
+                    <h1>Simple BLAS</h1>
+                    
+
+                    <div id="intro" class="section scrollspy">
+                        <h3>Intro</h3>
+                        <h5>What?</h5>
+                        <p>A better simpler website to illustrate BLAS operations.</p>
+                        <h5>Why?</h5>
+                        <p>The current website is an artifact straight outta 2000. <br> I mean just look at it: <a href="https://www.netlib.org/blas/">https://www.netlib.org/blas/</a></p>
+                        <h5>Who?</h5>
+                        <p>This is for people with some understanding of BLAS operations, it is meant more as a reference than a tutorial.</p>
+                        <h5>Help wanted!</h5>
+                        <p>
+                            I'm just some programmer who does some GPU compute stuff with linear algebra, I know little to nothing about most of these functions.
+                            <br> This site is very much a WIP, so please submit as many pull requests as you can tolerate.
+                        </p>
+                    </div>
+            
+                    <div id="level1" class="section scrollspy">
+                        <h3>Level 1</h3>
+                        <div class="row">
+                            <div class="col s12">
+                                <ul class="tabs">
+                                    <li class="tab col s3 "><a class="active black-text" href="#l1-single">Single</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l1-double">Double</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l1-complex">Complex</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l1-double-complex">Double complex</a></li>
+                                </ul>
+                            </div>
+                            <div id="l1-single" class="col s12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/d26/srotg_8f.html">SROTG</a></td>
+                                            <td><p>setup Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/d48/srotmg_8f.html">SROTMG</a></td>
+                                            <td><p>setup modified Givens rotation</p></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d6c/srot_8f.html">SROT</a></td>
+                                            <td><p>apply Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d0f/srotm_8f.html">SROTM</a></td>
+                                            <td><p>apply modified Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/da9/sswap_8f.html">SSWAP</a></td>
+                                            <td><p>swap x and y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/fa/ql_873ad1b0f7cb459bac76d37a03caeafa_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d04/sscal_8f.html">SSCAL</a></td>
+                                            <td><p>x = a*x</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/dc0/scopy_8f.html">SCOPY</a></td>
+                                            <td><p>copy x into y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/d3/ql_463eca278263f781a415c69c6b1b9cd3_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/daf/saxpy_8f.html">SAXPY</a></td>
+                                            <td><p>y = a*x + y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/44/ql_9e77f1c1ff154ca83322512eff908d44_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d16/sdot_8f.html">SDOT</a></td>
+                                            <td><p>dot product</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d47/sdsdot_8f.html">SDSDOT</a></td>
+                                            <td><p>dot product with extended precision accumulation</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/df1/snrm2_8f.html">SNRM2</a></td>
+                                            <td><p>Euclidean norm</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d66/scnrm2_8f.html">SCNRM2</a></td>
+                                            <td><p>Euclidean norm</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/d1f/sasum_8f.html">SASUM</a></td>
+                                            <td><p>sum of absolute values</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/09/ql_df115858fd5823d0245ccb5bd3213f09_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d44/isamax_8f.html">ISAMAX</a></td>
+                                            <td><p>index of max abs value</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/dd/ql_474fa5f3ba59037edec901f9bbe3cadd_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="l1-double" class="col s12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d13/drotg_8f.html">DROTG</a></td>
+                                            <td><p>setup Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/deb/drotmg_8f.html">DROTMG</a></td>
+                                            <td><p>setup modified Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/d23/drot_8f.html">DROT</a></td>
+                                            <td><p>apply Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/d7b/drotm_8f.html">DROTM</a></td>
+                                            <td><p>apply modified Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/dd4/dswap_8f.html">DSWAP</a></td>
+                                            <td><p>swap x and y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/fa/ql_873ad1b0f7cb459bac76d37a03caeafa_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/dd0/dscal_8f.html">DSCAL</a></td>
+                                            <td><p>x = a*x</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d6c/dcopy_8f.html">DCOPY</a></td>
+                                            <td><p>copy x into y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/d3/ql_463eca278263f781a415c69c6b1b9cd3_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/dcd/daxpy_8f.html">DAXPY</a></td>
+                                            <td><p>y = a*x + y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/44/ql_9e77f1c1ff154ca83322512eff908d44_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d5/df6/ddot_8f.html">DDOT</a></td>
+                                            <td><p>dot product</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/d01/dsdot_8f.html">DSDOT</a></td>
+                                            <td><p>dot product with extended precision accumulation</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d7f/dnrm2_8f.html">DNRM2</a></td>
+                                            <td><p>Euclidean norm</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d19/dznrm2_8f.html">DCNRM2</a></td>
+                                            <td><p>Euclidean norm</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d05/dasum_8f.html">DASUM</a></td>
+                                            <td><p>sum of absolute values</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/09/ql_df115858fd5823d0245ccb5bd3213f09_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/de0/idamax_8f.html">IDAMAX</a></td>
+                                            <td><p>index of max abs value</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/dd/ql_474fa5f3ba59037edec901f9bbe3cadd_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="l1-complex" class="col s12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/de6/crotg_8f.html">CROTG</a></td>
+                                            <td><p>setup Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d1/dbb/csrot_8f.html">CSROT</a></td>
+                                            <td><p>apply Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d1/d44/cswap_8f.html">CSWAP</a></td>
+                                            <td><p>swap x and y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/fa/ql_873ad1b0f7cb459bac76d37a03caeafa_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/d81/cscal_8f.html">CSCAL</a></td>
+                                            <td><p>x = a*x</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d5e/csscal_8f.html">CSSCAL</a></td>
+                                            <td><p>x = a*x</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/dfb/ccopy_8f.html">CCOPY</a></td>
+                                            <td><p>copy x into y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/d3/ql_463eca278263f781a415c69c6b1b9cd3_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/da2/caxpy_8f.html">CAXPY</a></td>
+                                            <td><p>y = a*x + y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/44/ql_9e77f1c1ff154ca83322512eff908d44_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/d7b/cdotu_8f.html">CDOTU</a></td>
+                                            <td><p>dot product</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/db2/cdotc_8f.html">CDOTC</a></td>
+                                            <td><p>dot product, conjugating the first vector</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/64/ql_cd865f758359657cc2786cd7fdf9ce64_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d53/scasum_8f.html">SCASUM</a></td>
+                                            <td><p>sum of absolute values</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/09/ql_df115858fd5823d0245ccb5bd3213f09_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/d51/icamax_8f.html">ICAMAX</a></td>
+                                            <td><p>index of max abs value</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/dd/ql_474fa5f3ba59037edec901f9bbe3cadd_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="l1-double-complex" class="col s12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/dfe/zrotg_8f.html">ZROTG</a></td>
+                                            <td><p>setup Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/de9/zdrot_8f.html">ZDROTF</a></td>
+                                            <td><p>apply Givens rotation</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/dc0/zswap_8f.html">ZSWAP</a></td>
+                                            <td><p>swap x and y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/fa/ql_873ad1b0f7cb459bac76d37a03caeafa_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d2/d74/zscal_8f.html">ZSCAL</a></td>
+                                            <td><p>x = a*x</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/d76/zdscal_8f.html">ZDSCAL</a></td>
+                                            <td><p>x = a*x</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d53/zcopy_8f.html">ZCOPY</a></td>
+                                            <td><p>copy x into y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/d3/ql_463eca278263f781a415c69c6b1b9cd3_l3.png"></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/db2/zaxpy_8f.html">ZAXPY</a></td>
+                                            <td><p>y = a*x + y</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/44/ql_9e77f1c1ff154ca83322512eff908d44_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d2d/zdotu_8f.html">ZDOTU</a></td>
+                                            <td><p>dot product</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/db8/zdotc_8f.html">ZDOTC</a></td>
+                                            <td><p>dot product, conjugating the first vector</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/64/ql_cd865f758359657cc2786cd7fdf9ce64_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/d0f/dzasum_8f.html">DZASUM</a></td>
+                                            <td><p>sum of absolute values</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/09/ql_df115858fd5823d0245ccb5bd3213f09_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/da5/izamax_8f.html">IZAMAX</a></td>
+                                            <td><p>index of max abs value</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/dd/ql_474fa5f3ba59037edec901f9bbe3cadd_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div id="level2" class="row section scrollspy">
+                        <h3>Level 2</h3>
+                        <div class="row">
+                            <div class="col s12">
+                                <ul class="tabs">
+                                    <li class="tab col s3 "><a class="active black-text" href="#l2-single">Single</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l2-double">Double</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l2-complex">Complex</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l2-double-complex">Double complex</a></li>
+                                </ul>
+                            </div>
+                            <div id="l2-single" class="col s12">
+                                <p>single placeholder</p>
+                            </div>
+                            <div id="l2-double" class="col s12">
+                                <p>double placeholder</p>
+                            </div>
+                            <div id="l2-complex" class="col s12">
+                                <p>complex placeholder</p>
+                            </div>
+                            <div id="l2-double-complex" class="col s12">
+                                <p>double complex placeholder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="level3" class="row section scrollspy">
+                        <h3>Level 3</h3>
+                        <div class="row">
+                            <div class="col s12">
+                                <ul class="tabs">
+                                    <li class="tab col s3 "><a class="active black-text" href="#l3-single">Single</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l3-double">Double</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l3-complex">Complex</a></li>
+                                    <li class="tab col s3"><a class="black-text" href="#l3-double-complex">Double complex</a></li>
+                                </ul>
+                            </div>
+                            <div id="l3-single" class="col s12">
+                                <p>single placeholder</p>
+                            </div>
+                            <div id="l3-double" class="col s12">
+                                <p>double placeholder</p>
+                            </div>
+                            <div id="l3-complex" class="col s12">
+                                <p>complex placeholder</p>
+                            </div>
+                            <div id="l3-double-complex" class="col s12">
+                                <p>double complex placeholder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.scrollspy');
+            var instances = M.ScrollSpy.init(elems);
+        });
+        
+        var el = document.querySelectorAll('.tabs');
+        var instance = M.Tabs.init(el);
+    </script>
+</html>
