@@ -41,6 +41,9 @@
             img {
                 max-width: 300px;
             }
+            td p {
+                max-width: 400px; 
+            }
             /* TODO Make focus side bar grey and not pink as it is currently */
         </style>
     </head>
@@ -397,15 +400,388 @@
                                 </ul>
                             </div>
                             <div id="l2-single" class="col s12">
-                                <p>placeholder</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d58/sgemv_8f.html">SGEMV</a></td>
+                                            <td><p>matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d46/sgbmv_8f.html">SGBMV</a></td>
+                                            <td><p>banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d2/d94/ssymv_8f.html">SSYMV</a></td>
+                                            <td><p>symmetric matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/da1/ssbmv_8f.html">SSBMV</a></td>
+                                            <td><p>symmetric banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/d68/sspmv_8f.html">SSPMV</a></td>
+                                            <td><p>symmetric packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d45/strmv_8f.html">STRMV</a></td>
+                                            <td><p>triangular matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d7d/stbmv_8f.html">STBMV</a></td>
+                                            <td><p>triangular banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/db1/stpmv_8f.html">STPMV</a></td>
+                                            <td><p>triangular packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d2a/strsv_8f.html">STRSV</a></td>
+                                            <td><p>solving triangular matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d1f/stbsv_8f.html">STBSV</a></td>
+                                            <td><p>solving triangular banded matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d7c/stpsv_8f.html">STPSV</a></td>
+                                            <td><p>solving triangular packed matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d5c/sger_8f.html">SGER</a></td>
+                                            <td><p>performs the rank 1 operation A := alpha*x*y' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/26/ql_eed0acc9c06bb0f16ee3c16a58eb6726_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/dac/ssyr_8f.html">SSYR</a></td>
+                                            <td><p>performs the symmetric rank 1 operation A := alpha*x*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/43/ql_92be867fe77127c7729a6231f14a0c43_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d2/d9b/sspr_8f.html">SSPR</a></td>
+                                            <td><p>symmetric packed rank 1 operation A := alpha*x*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/43/ql_92be867fe77127c7729a6231f14a0c43_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d99/ssyr2_8f.html">SSYR2</a></td>
+                                            <td><p>performs the symmetric rank 2 operation, A := alpha*x*y' + alpha*y*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/a1/ql_6a2b0214f93613ba48e626f743e79ba1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d3e/sspr2_8f.html">SSPR2</a></td>
+                                            <td><p>performs the symmetric packed rank 2 operation, A := alpha*x*y' + alpha*y*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/a1/ql_6a2b0214f93613ba48e626f743e79ba1_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <div id="l2-double" class="col s12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/da8/dgemv_8f.html">DGEMV</a></td>
+                                            <td><p>matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d2/d3f/dgbmv_8f.html">DGBMV</a></td>
+                                            <td><p>banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/dbe/dsymv_8f.html">DSYMV</a></td>
+                                            <td><p>symmetric matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/d1e/dsbmv_8f.html">DSBMV</a></td>
+                                            <td><p>symmetric banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/d85/dspmv_8f.html">DSPMV</a></td>
+                                            <td><p>symmetric packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/d7e/dtrmv_8f.html">DTRMV</a></td>
+                                            <td><p>triangular matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/d29/dtbmv_8f.html">DTBMV</a></td>
+                                            <td><p>triangular banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/dcd/dtpmv_8f.html">DTPMV</a></td>
+                                            <td><p>triangular packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d96/dtrsv_8f.html">DTRSV</a></td>
+                                            <td><p>solving triangular matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/dcf/dtbsv_8f.html">DTBSV</a></td>
+                                            <td><p>solving triangular banded matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d84/dtpsv_8f.html">DTPSV</a></td>
+                                            <td><p>solving triangular packed matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/da8/dger_8f.html">DGER</a></td>
+                                            <td><p>performs the rank 1 operation A := alpha*x*y' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/26/ql_eed0acc9c06bb0f16ee3c16a58eb6726_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/d60/dsyr_8f.html">DSYR</a></td>
+                                            <td><p>performs the symmetric rank 1 operation A := alpha*x*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/43/ql_92be867fe77127c7729a6231f14a0c43_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/dba/dspr_8f.html">DSPR</a></td>
+                                            <td><p>symmetric packed rank 1 operation A := alpha*x*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/43/ql_92be867fe77127c7729a6231f14a0c43_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d41/dsyr2_8f.html">DSYR2</a></td>
+                                            <td><p>performs the symmetric rank 2 operation, A := alpha*x*y' + alpha*y*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/a1/ql_6a2b0214f93613ba48e626f743e79ba1_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/d9e/dspr2_8f.html">DSPR2</a></td>
+                                            <td><p>performs the symmetric packed rank 2 operation, A := alpha*x*y' + alpha*y*x' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/a1/ql_6a2b0214f93613ba48e626f743e79ba1_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <div id="l2-complex" class="col s12">
-                                <p>complex placeholder</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/d8a/cgemv_8f.html">CGEMV</a></td>
+                                            <td><p>matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d75/cgbmv_8f.html">CGBMV</a></td>
+                                            <td><p>banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/d51/chemv_8f.html">CHEMV</a></td>
+                                            <td><p>hermitian matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/dc2/chbmv_8f.html">CHBMV</a></td>
+                                            <td><p>hermitian banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d2/d06/chpmv_8f.html">CHPMV</a></td>
+                                            <td><p>hermitian packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/d78/ctrmv_8f.html">CTRMV</a></td>
+                                            <td><p>triangular matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/dcd/ctbmv_8f.html">CTBMV</a></td>
+                                            <td><p>triangular banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/dbb/ctpmv_8f.html">CTPMV</a></td>
+                                            <td><p>triangular packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/dc8/ctrsv_8f.html">CTRSV</a></td>
+                                            <td><p>solving triangular matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d5f/ctbsv_8f.html">CTBSV</a></td>
+                                            <td><p>solving triangular banded matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/d56/ctpsv_8f.html">CTPSV</a></td>
+                                            <td><p>solving triangular packed matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d5f/cgeru_8f.html">CGERU</a></td>
+                                            <td><p>performs the rank 1 operation A := alpha*x*y' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/26/ql_eed0acc9c06bb0f16ee3c16a58eb6726_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dd/d84/cgerc_8f.html">CGERC</a></td>
+                                            <td><p>performs the rank 1 operation A := alpha*x*conjg( y' ) + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/26/ql_eed0acc9c06bb0f16ee3c16a58eb6726_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/d6d/cher_8f.html">CHER</a></td>
+                                            <td><p>hermitian rank 1 operation A := alpha*x*conjg(x') + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/2c/ql_489e8ce7882317546e85bc260face32c_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/dcd/chpr_8f.html">CHPR</a></td>
+                                            <td><p>hermitian packed rank 1 operation A := alpha*x*conjg( x' ) + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/2c/ql_489e8ce7882317546e85bc260face32c_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d87/cher2_8f.html">CHER2</a></td>
+                                            <td><p>hermitian rank 2 operation</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/79/ql_b4c253e3cec88b8159832ce70bd4de79_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d6/d44/chpr2_8f.html">CHRP2</a></td>
+                                            <td><p>hermitian packed rank 2 operation</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/79/ql_b4c253e3cec88b8159832ce70bd4de79_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <div id="l2-double-complex" class="col s12">
-                                <p>double complex placeholder</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Definition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d40/zgemv_8f.html">ZGEMV</a></td>
+                                            <td><p>matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d46/zgbmv_8f.html">ZGBMV</a></td>
+                                            <td><p>banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/1f/ql_157ab2448547e6ff0b27faea85584d1f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/ddd/zhemv_8f.html">ZHEMV</a></td>
+                                            <td><p>hermitian matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/d1a/zhbmv_8f.html">ZHBMV</a></td>
+                                            <td><p>hermitian banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d60/zhpmv_8f.html">ZHPMV</a></td>
+                                            <td><p>hermitian packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/bd/ql_3682f2f262038952f6911183d57fc6bd_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/dd1/ztrmv_8f.html">ZTRMV</a></td>
+                                            <td><p>triangular matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/d39/ztbmv_8f.html">ZTBMV</a></td>
+                                            <td><p>triangular banded matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d2/d9e/ztpmv_8f.html">ZTPMV</a></td>
+                                            <td><p>triangular packed matrix vector multiply</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/8f/ql_c8e743b3022cf36051cd5f7cfd8a498f_l3.png"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d1/d2f/ztrsv_8f.html">ZTRSV</a></td>
+                                            <td><p>solving triangular matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/d5a/ztbsv_8f.html">ZTBSV</a></td>
+                                            <td><p>solving triangular banded matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d57/ztpsv_8f.html">ZTPSV</a></td>
+                                            <td><p>solving triangular packed matrix problems</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/95/ql_f174cadc0ada02da0f78d2d49cf31d95_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/d12/zgeru_8f.html">ZGERU</a></td>
+                                            <td><p>performs the rank 1 operation A := alpha*x*y' + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/26/ql_eed0acc9c06bb0f16ee3c16a58eb6726_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d3/dad/zgerc_8f.html">ZGERC</a></td>
+                                            <td><p>performs the rank 1 operation A := alpha*x*conjg( y' ) + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/26/ql_eed0acc9c06bb0f16ee3c16a58eb6726_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d0e/zher_8f.html">ZHER</a></td>
+                                            <td><p>hermitian rank 1 operation A := alpha*x*conjg(x') + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/2c/ql_489e8ce7882317546e85bc260face32c_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/de1/zhpr_8f.html">ZHPR</a></td>
+                                            <td><p>hermitian packed rank 1 operation A := alpha*x*conjg( x' ) + A</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/2c/ql_489e8ce7882317546e85bc260face32c_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d8a/zher2_8f.html">ZHER2</a></td>
+                                            <td><p>hermitian rank 2 operation</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/79/ql_b4c253e3cec88b8159832ce70bd4de79_l3.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d5/d52/zhpr2_8f.html">ZHRP2</a></td>
+                                            <td><p>hermitian packed rank 2 operation</p></td>
+                                            <td><img class="definition" src="https://quicklatex.com/cache3/79/ql_b4c253e3cec88b8159832ce70bd4de79_l3.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
