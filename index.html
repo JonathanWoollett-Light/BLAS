@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="/scss/materialize.css">
 
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -12,31 +12,10 @@
         <title>BLAS</title>
 
         <style>
-            html {
-                font-family: "Consolas";
-            }
-            h1,h2,h3 {
-                text-decoration: underline;
-            }
-            h6 {
-                color:grey;
-            }
-            
-            .tabs .tab a:hover {
-                color:grey;
-                /*Custom Color On Hover*/
-            }
-            .tabs .tab a:focus.active {
-                background-color: rgba(80, 80, 80, 0.1);
-                /*Custom Background Color While Active*/
-            }
-            .tabs .indicator {
-                background-color:black;
-                /*Custom Color Of Indicator*/
-            }
-
-            .table-of-contents a.active {
-                border-left: 2px solid grey;
+            body {
+                background-color: #eeeeee;
+                /* font-family: "Consolas"; */
+                color: #424242;
             }
             img {
                 max-width: 300px;
@@ -45,9 +24,10 @@
                 max-width: 400px; 
             }
             td {
-                padding-top: 1px;
-                padding-bottom: 1px;
+                padding-top: 1px !important;
+                padding-bottom: 1px !important;
             }
+
             
             /* TODO Make focus side bar grey and not pink as it is currently */
         </style>
