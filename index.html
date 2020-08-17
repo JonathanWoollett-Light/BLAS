@@ -28,8 +28,25 @@
                 padding-bottom: 1px !important;
             }
 
-            
-            /* TODO Make focus side bar grey and not pink as it is currently */
+
+            /* Tooltip text */
+            .tooltiped .tooltip {
+                visibility: hidden;
+                max-width: 20vw;
+                background-color: black;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 5px;
+                
+                /* Position the tooltip text - see examples below! */
+                position: absolute;
+                left: 5vw;
+            }
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltiped:hover .tooltip {
+                visibility: visible;
+            }
+
         </style>
     </head>
     <body>
@@ -111,47 +128,47 @@
                                             <td><p>apply modified Givens rotation</p></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/da9/sswap_8f.html">SSWAP</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/da9/sswap_8f.html" class="tooltiped">SSWAP<img src="SSWAP.gif" class="tooltip"></a></td>
                                             <td><p>swap x and y</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/fa/ql_873ad1b0f7cb459bac76d37a03caeafa_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d04/sscal_8f.html">SSCAL</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d04/sscal_8f.html" class="tooltiped">SSCAL<img src="SSCAL.gif" class="tooltip"></a></td>
                                             <td><p>x = a*x</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/dc0/scopy_8f.html">SCOPY</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/dc0/scopy_8f.html" class="tooltiped">SCOPY<img src="SCOPY.gif" class="tooltip"></a></td>
                                             <td><p>copy x into y</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/d3/ql_463eca278263f781a415c69c6b1b9cd3_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/daf/saxpy_8f.html">SAXPY</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d8/daf/saxpy_8f.html" class="tooltiped">SAXPY<img src="SAXPY.gif" class="tooltip"></a></td>
                                             <td><p>y = a*x + y</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/44/ql_9e77f1c1ff154ca83322512eff908d44_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d16/sdot_8f.html">SDOT</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d0/d16/sdot_8f.html" class="tooltiped">SDOT<img src="SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d47/sdsdot_8f.html">SDSDOT</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d47/sdsdot_8f.html" class="tooltiped">SDSDOT<img src="SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product with extended precision accumulation</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/df1/snrm2_8f.html">SNRM2</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d7/df1/snrm2_8f.html" class="tooltiped">SNRM2<img src="SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d66/scnrm2_8f.html">SCNRM2</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/d66/scnrm2_8f.html" class="tooltiped">SCNRM2<img src="SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/d1f/sasum_8f.html">SASUM</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/df/d1f/sasum_8f.html" class="tooltiped">SASUM<img src="SASUM.gif" class="tooltip"></a></td>
                                             <td><p>sum of absolute values</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/09/ql_df115858fd5823d0245ccb5bd3213f09_l3.png"></td>
                                         </tr>
@@ -190,47 +207,47 @@
                                             <td><p>apply modified Givens rotation</p></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/dd4/dswap_8f.html">DSWAP</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/db/dd4/dswap_8f.html" class="tooltiped">DSWAP<img src="SSWAP.gif" class="tooltip"></a></td>
                                             <td><p>swap x and y</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/fa/ql_873ad1b0f7cb459bac76d37a03caeafa_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/dd0/dscal_8f.html">DSCAL</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d4/dd0/dscal_8f.html" class="tooltiped">DSCAL<img src="SSCAL.gif" class="tooltip"></a></td>
                                             <td><p>x = a*x</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/46/ql_0faa555976333caeef393302f8c0ef46_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d6c/dcopy_8f.html">DCOPY</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d6c/dcopy_8f.html" class="tooltiped">DCOPY<img src="SCOPY.gif" class="tooltip"></a></td>
                                             <td><p>copy x into y</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/d3/ql_463eca278263f781a415c69c6b1b9cd3_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/dcd/daxpy_8f.html">DAXPY</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/dcd/daxpy_8f.html" class="tooltiped">DAXPY<img src="SAXPY.gif" class="tooltip"></a></td>
                                             <td><p>y = a*x + y</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/44/ql_9e77f1c1ff154ca83322512eff908d44_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d5/df6/ddot_8f.html">DDOT</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d5/df6/ddot_8f.html" class="tooltiped">DDOT<img src="SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/d01/dsdot_8f.html">DSDOT</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/dc/d01/dsdot_8f.html" class="tooltiped">DSDOT<img src="SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product with extended precision accumulation</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/b1/ql_508ba9abef2dabf47cba804f7b6260b1_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d7f/dnrm2_8f.html">DNRM2</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/da/d7f/dnrm2_8f.html" class="tooltiped">DNRM2<img src="SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d19/dznrm2_8f.html">DCNRM2</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/d9/d19/dznrm2_8f.html" class="tooltiped">DCNRM2<img src="SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/e6/ql_f5e5b5bdff74b59f76081de51dcd38e6_l3.png"></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d05/dasum_8f.html">DASUM</a></td>
+                                            <td><a href="http://www.netlib.org/lapack/explore-html/de/d05/dasum_8f.html" class="tooltiped">DASUM<img src="SASUM.gif" class="tooltip"></a></td>
                                             <td><p>sum of absolute values</p></td>
                                             <td><img class="definition" src="https://quicklatex.com/cache3/09/ql_df115858fd5823d0245ccb5bd3213f09_l3.png"></td>
                                         </tr>
@@ -997,11 +1014,13 @@
     </body>
 
     <script>
+        // Activates scrollspy
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.scrollspy');
             var instances = M.ScrollSpy.init(elems);
         });
         
+        // Activates tabs
         var el = document.querySelectorAll('.tabs');
         var instance = M.Tabs.init(el);
     </script>
