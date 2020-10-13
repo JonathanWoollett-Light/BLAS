@@ -1,8 +1,12 @@
 # blas
 
+Site link: https://jonathanwoollett-light.github.io/blas/
+
 ### What?
 
 A better simpler website to illustrate BLAS operations.
+
+
 
 ### Why?
 
