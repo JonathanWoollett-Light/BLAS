@@ -1,4 +1,4 @@
-# blas
+# BLAS
 
 Site link: https://jonathanwoollett-light.github.io/BLAS/
 
