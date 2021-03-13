@@ -1,6 +1,6 @@
 # blas
 
-Site link: https://jonathanwoollett-light.github.io/blas/
+Site link: https://jonathanwoollett-light.github.io/BLAS/
 
 ### What?
 
