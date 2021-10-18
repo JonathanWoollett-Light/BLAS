@@ -9,6 +9,14 @@
 
         <meta charset="UTF-8">
 
+        <!-- MathQuill -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.css"/> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.js"></script>
+        <script>
+            var MQ = MathQuill.getInterface(2);
+        </script>
+
         <title>BLAS</title>
 
         <style>
@@ -53,6 +61,8 @@
     </head>
     <body>
         <div class="container">
+            <p>Solve <span class="latex">ax^2 + bx + c = 0</span>.</p>
+
             <div class="row">
                 <div class="col hide-on-small-only m3 l2 pinned">
                     <ul class="section table-of-contents">
@@ -106,6 +116,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
+                                            <th>Equation</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -128,42 +139,52 @@
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d9/da9/sswap_8f.html" class="tooltiped">SSWAP<img src="animations/l1/SSWAP.gif" class="tooltip"></a></td>
                                             <td><p>swap x and y</p></td>
+                                            <td><span class="latex">x\Leftrightarrow y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d9/d04/sscal_8f.html" class="tooltiped">SSCAL<img src="animations/l1/SSCAL.gif" class="tooltip"></a></td>
                                             <td><p>x = a*x</p></td>
+                                            <td><span class="latex">x\leftarrow \alpha x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/de/dc0/scopy_8f.html" class="tooltiped">SCOPY<img src="animations/l1/SCOPY.gif" class="tooltip"></a></td>
                                             <td><p>copy x into y</p></td>
+                                            <td><span class="latex">y\leftarrow x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d8/daf/saxpy_8f.html" class="tooltiped">SAXPY<img src="animations/l1/SAXPY.gif" class="tooltip"></a></td>
                                             <td><p>y = a*x + y</p></td>
+                                            <td><span class="latex">y\leftarrow \alpha x + y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d0/d16/sdot_8f.html" class="tooltiped">SDOT<img src="animations/l1/SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product</p></td>
+                                            <td><span class="latex">dot\leftarrow x^T y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d9/d47/sdsdot_8f.html" class="tooltiped">SDSDOT<img src="animations/l1/SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product with extended precision accumulation</p></td>
+                                            <td><span class="latex">dot\leftarrow x^T y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d7/df1/snrm2_8f.html" class="tooltiped">SNRM2<img src="animations/l1/SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
+                                            <td><span class="latex">nrm2\leftarrow ||x||_2</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/db/d66/scnrm2_8f.html" class="tooltiped">SCNRM2<img src="animations/l1/SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
+                                            <td><span class="latex">nrm2\leftarrow ||x||_2</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/df/d1f/sasum_8f.html" class="tooltiped">SASUM<img src="animations/l1/SASUM.gif" class="tooltip"></a></td>
                                             <td><p>sum of absolute values</p></td>
+                                            <td><span class="latex">asum\leftarrow ||re(x)||_1 +||im(x)||_1</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d6/d44/isamax_8f.html">ISAMAX</a></td>
                                             <td><p>index of max abs value</p></td>
+                                            <td><span class="latex">\text{amax}\leftarrow 1^{st}\ni |re(x_k)|+|im(x_k)|=max(|re(x_i)|+|im(x_i)|)</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -174,6 +195,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
+                                            <th>Equation</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -196,42 +218,52 @@
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/db/dd4/dswap_8f.html" class="tooltiped">DSWAP<img src="animations/l1/SSWAP.gif" class="tooltip"></a></td>
                                             <td><p>swap x and y</p></td>
+                                            <td><span class="latex">x\Leftrightarrow y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d4/dd0/dscal_8f.html" class="tooltiped">DSCAL<img src="animations/l1/SSCAL.gif" class="tooltip"></a></td>
                                             <td><p>x = a*x</p></td>
+                                            <td><span class="latex">x\leftarrow \alpha x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/da/d6c/dcopy_8f.html" class="tooltiped">DCOPY<img src="animations/l1/SCOPY.gif" class="tooltip"></a></td>
                                             <td><p>copy x into y</p></td>
+                                            <td><span class="latex">y\leftarrow x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d9/dcd/daxpy_8f.html" class="tooltiped">DAXPY<img src="animations/l1/SAXPY.gif" class="tooltip"></a></td>
                                             <td><p>y = a*x + y</p></td>
+                                            <td><span class="latex">y\leftarrow \alpha x + y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d5/df6/ddot_8f.html" class="tooltiped">DDOT<img src="animations/l1/SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product</p></td>
+                                            <td><span class="latex">dot\leftarrow x^T y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/dc/d01/dsdot_8f.html" class="tooltiped">DSDOT<img src="animations/l1/SDOT.gif" class="tooltip"></a></td>
                                             <td><p>dot product with extended precision accumulation</p></td>
+                                            <td><span class="latex">dot\leftarrow x^T y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/da/d7f/dnrm2_8f.html" class="tooltiped">DNRM2<img src="animations/l1/SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
+                                            <td><span class="latex">nrm2\leftarrow ||x||_2</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d9/d19/dznrm2_8f.html" class="tooltiped">DCNRM2<img src="animations/l1/SNRM2.gif" class="tooltip"></a></td>
                                             <td><p>Euclidean norm</p></td>
+                                            <td><span class="latex">nrm2\leftarrow ||x||_2</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/de/d05/dasum_8f.html" class="tooltiped">DASUM<img src="animations/l1/SASUM.gif" class="tooltip"></a></td>
                                             <td><p>sum of absolute values</p></td>
+                                            <td><span class="latex">asum\leftarrow ||re(x)||_1 +||im(x)||_1</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/dd/de0/idamax_8f.html">IDAMAX</a></td>
                                             <td><p>index of max abs value</p></td>
+                                            <td><span class="latex">\text{amax}\leftarrow 1^{st}\ni |re(x_k)|+|im(x_k)|=max(|re(x_i)|+|im(x_i)|)</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -242,6 +274,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
+                                            <th>Equation</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -256,26 +289,32 @@
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d1/d44/cswap_8f.html">CSWAP</a></td>
                                             <td><p>swap x and y</p></td>
+                                            <td><span class="latex">x\Leftrightarrow y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/dc/d81/cscal_8f.html">CSCAL</a></td>
                                             <td><p>x = a*x</p></td>
+                                            <td><span class="latex">x\leftarrow \alpha x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/de/d5e/csscal_8f.html">CSSCAL</a></td>
                                             <td><p>x = a*x</p></td>
+                                            <td><span class="latex">x\leftarrow \alpha x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d9/dfb/ccopy_8f.html">CCOPY</a></td>
                                             <td><p>copy x into y</p></td>
+                                            <td><span class="latex">y\leftarrow x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/de/da2/caxpy_8f.html">CAXPY</a></td>
                                             <td><p>y = a*x + y</p></td>
+                                            <td><span class="latex">y\leftarrow \alpha x + y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d7/d7b/cdotu_8f.html">CDOTU</a></td>
                                             <td><p>dot product</p></td>
+                                            <td><span class="latex">dot\leftarrow x^T y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/dd/db2/cdotc_8f.html">CDOTC</a></td>
@@ -284,10 +323,12 @@
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/db/d53/scasum_8f.html">SCASUM</a></td>
                                             <td><p>sum of absolute values</p></td>
+                                            <td><span class="latex">asum\leftarrow ||re(x)||_1 +||im(x)||_1</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/dd/d51/icamax_8f.html">ICAMAX</a></td>
                                             <td><p>index of max abs value</p></td>
+                                            <td><span class="latex">\text{amax}\leftarrow 1^{st}\ni |re(x_k)|+|im(x_k)|=max(|re(x_i)|+|im(x_i)|)</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -312,26 +353,32 @@
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d3/dc0/zswap_8f.html">ZSWAP</a></td>
                                             <td><p>swap x and y</p></td>
+                                            <td><span class="latex">x\Leftrightarrow y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d2/d74/zscal_8f.html">ZSCAL</a></td>
                                             <td><p>x = a*x</p></td>
+                                            <td><span class="latex">x\leftarrow \alpha x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/dd/d76/zdscal_8f.html">ZDSCAL</a></td>
                                             <td><p>x = a*x</p></td>
+                                            <td><span class="latex">x\leftarrow \alpha x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d6/d53/zcopy_8f.html">ZCOPY</a></td>
                                             <td><p>copy x into y</p></td>
+                                            <td><span class="latex">y\leftarrow x</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d7/db2/zaxpy_8f.html">ZAXPY</a></td>
                                             <td><p>y = a*x + y</p></td>
+                                            <td><span class="latex">y\leftarrow \alpha x + y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/db/d2d/zdotu_8f.html">ZDOTU</a></td>
                                             <td><p>dot product</p></td>
+                                            <td><span class="latex">dot\leftarrow x^T y</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d6/db8/zdotc_8f.html">ZDOTC</a></td>
@@ -340,10 +387,12 @@
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/df/d0f/dzasum_8f.html">DZASUM</a></td>
                                             <td><p>sum of absolute values</p></td>
+                                            <td><span class="latex">asum\leftarrow ||re(x)||_1 +||im(x)||_1</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://www.netlib.org/lapack/explore-html/d0/da5/izamax_8f.html">IZAMAX</a></td>
                                             <td><p>index of max abs value</p></td>
+                                            <td><span class="latex">\text{amax}\leftarrow 1^{st}\ni |re(x_k)|+|im(x_k)|=max(|re(x_i)|+|im(x_i)|)</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -870,6 +919,11 @@
             var instances = M.ScrollSpy.init(elems);
         });
         
+        let latexSpans = document.querySelectorAll(".latex");
+        for (let i = 0; i < latexSpans.length; i++) {
+            MQ.StaticMath(latexSpans[i]);
+        }
+
         // Activates tabs
         var el = document.querySelectorAll('.tabs');
         var instance = M.Tabs.init(el);
